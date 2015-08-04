@@ -16,7 +16,7 @@ The `config/` directory houses code that, as you can guess, configures your app.
 
 #### `environment.rb`
 
-Think of `environment.rb` as a manifest for all of your files. It should require all of your executable code (like what's in `lib/`). In turn, other code that executes it should require `environment.rb`; it's easier and cleaner to require just this one file everything then continuously updating whenever you add a new class.
+Think of `environment.rb` as a manifest for all of your files. It should require all of your executable code (like what's in `lib/`). In turn, other code that executes it should require `environment.rb`; it's easier and cleaner to require just this one file containing everything then continuously updating whenever you add a new class.
 
 Below we'll talk about what should be requiring `environment.rb`.
 
@@ -24,7 +24,7 @@ To pass the tests, make an `environment.rb` file and have it require the code in
 
 ### `bin/`
 
-The `bin/` directory holds files that work to execute your code. Where you code is defined should always be separate from where it's executed.
+The `bin/` directory holds files that work to execute your code. Where your code is defined should always be separate from where it's executed.
 
 Create a file called `run.rb` which runs the `Foo` class. Be sure that it requires `environment.rb`, so that it knows about `Foo` and `Bar`.
 
